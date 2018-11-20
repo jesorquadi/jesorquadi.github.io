@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
-	<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 	<style type="text/css">
 		*{	
 
@@ -12,219 +12,58 @@
 			margin:0;
 			padding:0;
 		}
-		html{
-			scroll-behavior: smooth;
-		}
-		body,html{
-			height:100%;
-		}
-		a:link{
-			text-decoration: none;
-			color: black;
-		}
-		a:visited {color: black;
-		 text-decoration: none;
-		  }
-
-
-		
-
-/*primera part*/
-		#nit{			  
-    background-image: url('images/nitgif.gif');
-      height: 100%; 
-      opacity:0%;
-
-
-      font-size:4em;
-    
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-
-			
-		}
-		#noches{	
-			position:absolute;
-			top:40%;
-			
+		body{
+			overflow-x: none;
+			box-sizing: border-content;
 			text-align: center;
-			width: 100%;
-			
-			
-
-			transition-duration: 3s;
-			transition-timing-function: linear;
+			font-size:10em;
 		}
-		#claras{
-			color:white;
-			transition: text-shadow 1s;
-			}
-
-		#claras:hover{
-			text-shadow: 0 0 30px #fff;
-			
+		@font-face{
+			font-family: 'gotham';
+			src:url('fonts/GothamBook.ttf'),
+			url('fonts/GothamBold.ttf'),
+			url('fonts/Gotham-Black.otf'),
+			url(fonts/GothamLight.ttf),
+			url(fonts/Gotham-Thin.ttf);
 		}
-		#noches:hover{
-			color:white;			
-			}
-	
-	/*segona part*/
-		
-		#resuelvo{
-			height:100%;
-			width: 100%;
-			font-size:4em;
-			position:relative;
-			text-align:center;
+		#caixa{
+			width: 20px;
+			height:120%;
 		}
-		#resuelvo p{
-			top:40%;
-			text-align: center;
-			position: absolute;
-			width:100%;
-		}
-		
-
-
-	
-
-		
-		#soledad img {
-			height: 400px;
-			width:auto;
-			opacity:0;
-			position: absolute;
-			z-index: -5;
-			top:-400px;
-			left:1000px;
-			transition: .6s ease;	
-	
-
-		} 
-		#soledad{
-			font-weight: 700;
-		}
-
-		#soledad:hover img{
-			opacity:1;
-			}
-	
-		#resuelvo1, #resuelvo2{
-			font-weight: 300;	
-		}
-
-		/*tercera part*/
-		
-		#invito{
-			height:100%;
-			width: 100%;
-			font-size:4em;
-			position:relative;
-			text-align:center;
+		#caixa2{
+			height:10px;
 			background-color: black;
 		}
-
-		#invito p{
-			top:40%;
-			text-align: center;
-			position: absolute;
-			width:100%;
-			color:white;
-			font-weight: 300;
+		#caixa3{
+			height:400px;
+			padding-top: 110%;
+			background-color: cyan;
 		}
-		#invito span{
-			font-weight: 700;
+		#passa3:hover{
+			cursor:wait;
 		}
-
-		#luna img {
-			height: 200px;
-			width:auto;
-			opacity:0;
-			position: absolute;
-			top:-50px;
-			transition:.2s;			
-		}
-
-		#luna:hover img{
-			opacity:1;
-			filter: drop-shadow(0 0 12px #fff);
-			transition-duration: .10s ease;  				
-		}
-		#luna:hover{
-			color:transparent;
-
-		}
-
-		/*última part*/
-		
-		#final{
-			height:100%;
+		p#principal{
+			position: relative;
+			height:100vh;
 			width: 100%;
-			font-size:4em;
-			position:relative;
-			text-align:center;
-			background-color: white;
+			}
+		p#principal>span{
+			display: block;
+			position: relative;
 		}
-		#final p{
-			top:40%;
-			text-align: center;
-			position: absolute;
-			width: 100%;
-			font-weight: 300;
+		p#principal>span:nth-child(2){
+			display: block;
+
+				}
+		p#principal>span:nth-child(3){
+			padding-top:220%;
 		}
-		#sombra{
-			font-weight: 700;
-			
-			text-shadow: -4px 3px 0px rgba(255, 0, 0, 0.8), -6px 6px 0 rgba(0,0,255,0.8);
-
-		}
-
-
-
-
-	
-
-		#tres2{
-			width: 100%;
-			left:377px;
-			position: absolute;
-			color:red;
-			opacity:0;
-			
-		}
-		#tres2:hover {
-			opacity:1;
-			top:60px;		
-		}
-
-		#tres3{
-			width: 100%;
-			left:377px;
-			position: absolute;
-			color:blue;	
-			opacity:0;		
-		}
-		#tres3:hover {
-			opacity:1;
-			top:-60px;		
-		}
-
-
-
-
-</style>
+	</style>
 </head>
 <body>
-	<div id="nit"><p id="noches"><span id="enlas">En las noches </span> <a href="#resuelvo"><span id="claras">claras</span></a>
-		</p></div>	
-		<div id="resuelvo"> <p><span id="resuelvo1">resuelvo el problema de la </span><span id="soledad"><img src="images/soletat.gif"><a href="#invito">soledad</a></span> <span id="resuelvo2">del ser.</span></p></div>
-		<div id="invito"><p>Invito a la <span id="luna"><a href="#final"><img src="images/moon.png"></a> luna</span></p></div>
-		<div id="final"><p> y con mi <span id="sombra">sombra </span> somos <span id="tres">tres.</span><span id="tres2">tres.</span><span id="tres3">tres.</span>	</p></div>
-
-	</body>
-		
+	<p id="principal"><span id="passa1">A cada <a href="#caixa">passa,</a></span>
+		<span id="passa2"><div id="caixa"></div>cada passa,</span>
+		<div id="caixa2"></div>
+		<span id="passa3"><div id="caixa3"></div>a cada passa que dones<br>fas un nou camí</span></p>
 </body>
 </html>
